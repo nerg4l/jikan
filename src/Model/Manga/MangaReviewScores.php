@@ -2,7 +2,7 @@
 
 namespace Jikan\Model\Manga;
 
-use Jikan\Parser;
+use Jikan\Parser\Reviews\MangaReviewScoresParser;
 
 /**
  * Class MangaReviewScores
@@ -38,10 +38,10 @@ class MangaReviewScores
     private $enjoyment;
 
     /**
-     * @param  Parser\Manga\MangaReviewScoresParser $parser
-     * @return MangaReviewScores
+     * @param  \Jikan\Parser\Reviews\MangaReviewScoresParser $parser
+     * @return self
      */
-    public static function fromParser(Parser\Manga\MangaReviewScoresParser $parser): MangaReviewScores
+    public static function fromParser(MangaReviewScoresParser $parser): self
     {
         $instance = new self();
 

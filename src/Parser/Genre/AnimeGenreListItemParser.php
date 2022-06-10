@@ -3,7 +3,7 @@
 namespace Jikan\Parser\Genre;
 
 use Jikan\Helper\Constants;
-use Jikan\Model;
+use Jikan\Model\Genre\AnimeGenreListItem;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -30,13 +30,13 @@ class AnimeGenreListItemParser implements ParserInterface
     }
 
     /**
-     * @return \Jikan\Model\Genre\AnimeGenre
+     * @return \Jikan\Model\Genre\AnimeGenreListItem
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public function getModel(): Model\Genre\AnimeGenreListItem
+    public function getModel(): AnimeGenreListItem
     {
-        return Model\Genre\AnimeGenreListItem::fromParser($this);
+        return AnimeGenreListItem::fromParser($this);
     }
 
     /**

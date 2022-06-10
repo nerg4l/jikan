@@ -4,7 +4,6 @@ namespace Jikan\Parser\Top;
 
 use Jikan\Model\Top\TopCharacterListItem;
 use Jikan\Model\Top\TopCharacters;
-use Jikan\Model\Top\TopPeople;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**

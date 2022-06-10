@@ -25,7 +25,7 @@ class SeasonArchive extends Results
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\SeasonList\SeasonListItem[]
      */
     public function getResults(): array
     {

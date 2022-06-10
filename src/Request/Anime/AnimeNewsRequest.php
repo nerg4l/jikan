@@ -25,6 +25,7 @@ class AnimeNewsRequest implements RequestInterface
      * AnimeNewsRequest constructor.
      *
      * @param int $id
+     * @param ?int $page
      */
     public function __construct(int $id, ?int $page = 1)
     {
@@ -49,7 +50,7 @@ class AnimeNewsRequest implements RequestInterface
     }
 
     /**
-     * @return int
+     * @return ?int
      */
     public function getPage(): ?int
     {

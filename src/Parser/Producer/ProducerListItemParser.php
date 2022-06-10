@@ -3,10 +3,7 @@
 namespace Jikan\Parser\Producer;
 
 use Jikan\Helper\Constants;
-use Jikan\Helper\JString;
-use Jikan\Helper\Parser;
-use Jikan\Model;
-use Jikan\Parser\Common\AnimeCardParser;
+use Jikan\Model\Producer\ProducerListItem;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -37,9 +34,9 @@ class ProducerListItemParser implements ParserInterface
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public function getModel(): Model\Producer\ProducerListItem
+    public function getModel(): ProducerListItem
     {
-        return Model\Producer\ProducerListItem::fromParser($this);
+        return ProducerListItem::fromParser($this);
     }
 
     /**

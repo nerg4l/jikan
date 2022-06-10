@@ -312,5 +312,4 @@ class MangaParserTest extends TestCase
             $background
         );
     }
-
 }

@@ -2,7 +2,8 @@
 
 namespace Jikan\Parser\Watch;
 
-use Jikan\Model;
+use Jikan\Model\Watch\PromotionalVideoListItem;
+use Jikan\Model\Watch\PromotionalVideos;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -27,11 +28,15 @@ class WatchPromotionalVideosParser
         $this->crawler = $crawler;
     }
 
-    public function getModel(): Model\Watch\PromotionalVideos
+    public function getModel(): PromotionalVideos
     {
-        return Model\Watch\PromotionalVideos::fromParser($this);
+        return PromotionalVideos::fromParser($this);
     }
 
+    /**
+     * @return \Jikan\Model\Watch\PromotionalVideoListItem[]
+     * @throws \Exception
+     */
     public function getResults() : array
     {
         $node = $this->crawler->filterXPath(
@@ -43,7 +48,7 @@ class WatchPromotionalVideosParser
         }
 
         return $node->each(function (Crawler $crawler) {
-            return Model\Watch\PromotionalVideoListItem::fromParser(new PromotionalVideoListItemParser($crawler));
+            return PromotionalVideoListItem::fromParser(new PromotionalVideoListItemParser($crawler));
         });
     }
 

@@ -15,7 +15,7 @@ class ClubImageResource
     private $jpg;
 
     /**
-     * @param string $imageUrl
+     * @param ?string $imageUrl
      * @return ClubImageResource
      */
     public static function factory(?string $imageUrl) : self

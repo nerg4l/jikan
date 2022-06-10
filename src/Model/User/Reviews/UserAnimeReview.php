@@ -5,7 +5,6 @@ namespace Jikan\Model\User\Reviews;
 use Jikan\Model\Anime\AnimeReviewScores;
 use Jikan\Model\Common\AnimeMeta;
 use Jikan\Model\Reviews\AnimeReview;
-use Jikan\Model\Reviews\Reviewer;
 use Jikan\Parser\Reviews\AnimeReviewParser;
 
 /**

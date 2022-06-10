@@ -135,7 +135,7 @@ class PersonParser implements ParserInterface
     }
 
     /**
-     * @return array|null
+     * @return array
      * @throws \InvalidArgumentException
      */
     public function getPersonAlternateNames(): array

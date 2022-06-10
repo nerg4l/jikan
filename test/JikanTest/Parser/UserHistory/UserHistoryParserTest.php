@@ -50,5 +50,4 @@ class UserHistoryParserTest extends TestCase
     {
         self::assertInstanceOf(\DateTimeImmutable::class, $this->parser[0]->getDate());
     }
-
 }

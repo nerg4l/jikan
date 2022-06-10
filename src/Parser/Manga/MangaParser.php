@@ -84,7 +84,7 @@ class MangaParser implements ParserInterface
     }
 
     /**
-     * @return string
+     * @return ?string
      * @throws \InvalidArgumentException
      */
     public function getMangaSynopsis(): ?string
@@ -411,7 +411,7 @@ class MangaParser implements ParserInterface
     }
 
     /**
-     * @return float
+     * @return ?float
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
@@ -432,7 +432,7 @@ class MangaParser implements ParserInterface
     }
 
     /**
-     * @return int
+     * @return ?int
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
@@ -449,7 +449,7 @@ class MangaParser implements ParserInterface
     }
 
     /**
-     * @return int
+     * @return ?int
      * @throws \InvalidArgumentException
      */
     public function getMangaRank(): ?int
@@ -475,7 +475,7 @@ class MangaParser implements ParserInterface
     }
 
     /**
-     * @return int
+     * @return ?int
      * @throws \InvalidArgumentException
      */
     public function getMangaPopularity(): ?int
@@ -494,7 +494,7 @@ class MangaParser implements ParserInterface
     }
 
     /**
-     * @return int
+     * @return ?int
      * @throws \InvalidArgumentException
      */
     public function getMangaMembers(): ?int
@@ -513,7 +513,7 @@ class MangaParser implements ParserInterface
     }
 
     /**
-     * @return int
+     * @return ?int
      * @throws \InvalidArgumentException
      */
     public function getMangaFavorites(): ?int
@@ -593,7 +593,7 @@ class MangaParser implements ParserInterface
     }
 
     /**
-     * @return string
+     * @return ?string
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
@@ -621,7 +621,7 @@ class MangaParser implements ParserInterface
     }
 
     /**
-     * @return string
+     * @return ?string
      * @throws \InvalidArgumentException
      */
     public function getMangaPublishedString(): ?string

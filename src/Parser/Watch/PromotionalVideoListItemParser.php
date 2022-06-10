@@ -2,11 +2,9 @@
 
 namespace Jikan\Parser\Watch;
 
-use Jikan\Helper\JString;
 use Jikan\Helper\Parser;
 use Jikan\Model\Common\YoutubeMeta;
 use Jikan\Model\Watch\EpisodeListItem;
-use Jikan\Model\Watch\RecentEpisodeListItem;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 

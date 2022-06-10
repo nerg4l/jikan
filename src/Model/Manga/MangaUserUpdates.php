@@ -4,7 +4,7 @@ namespace Jikan\Model\Manga;
 
 use Jikan\Model\Common\Collection\Pagination;
 use Jikan\Model\Common\Collection\Results;
-use Jikan\Parser;
+use Jikan\Parser\Manga\MangaRecentlyUpdatedByUsersParser;
 
 /**
  * Class AnimeUserUpdates
@@ -25,14 +25,14 @@ class MangaUserUpdates extends Results implements Pagination
     private $lastVisiblePage = 1;
 
     /**
-     * @param Parser\Anime\MangaRecentlyUpdatedByUsersParser $parser
+     * @param \Jikan\Parser\Manga\MangaRecentlyUpdatedByUsersParser $parser
      *
      * @return MangaUserUpdates
      * @throws \Exception
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(Parser\Manga\MangaRecentlyUpdatedByUsersParser $parser): self
+    public static function fromParser(MangaRecentlyUpdatedByUsersParser $parser): self
     {
         $instance = new self();
 
@@ -65,7 +65,7 @@ class MangaUserUpdates extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Manga\MangaRecentlyUpdatedByUser[]
      */
     public function getResults(): array
     {

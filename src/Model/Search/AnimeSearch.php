@@ -65,7 +65,7 @@ class AnimeSearch extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Search\AnimeSearchListItem[]
      */
     public function getResults(): array
     {

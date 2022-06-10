@@ -156,6 +156,4 @@ class AnimeReviewsParserTest extends TestCase
             $this->review->getReview()
         );
     }
-
-
 }

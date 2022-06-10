@@ -2,7 +2,8 @@
 
 namespace Jikan\Parser\Watch;
 
-use Jikan\Model;
+use Jikan\Model\Watch\EpisodeListItem;
+use Jikan\Model\Watch\Episodes;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -27,9 +28,9 @@ class WatchEpisodesParser
         $this->crawler = $crawler;
     }
 
-    public function getModel(): Model\Watch\Episodes
+    public function getModel(): Episodes
     {
-        return Model\Watch\Episodes::fromParser($this);
+        return Episodes::fromParser($this);
     }
 
     public function getResults() : array
@@ -44,7 +45,7 @@ class WatchEpisodesParser
         }
 
         return $node->each(function (Crawler $crawler) {
-            return Model\Watch\EpisodeListItem::fromParser(new EpisodeListItemParser($crawler));
+            return EpisodeListItem::fromParser(new EpisodeListItemParser($crawler));
         });
     }
 }

@@ -4,7 +4,6 @@ namespace Jikan\Model\Reviews;
 
 use Jikan\Model\Common\Collection\Pagination;
 use Jikan\Model\Common\Collection\Results;
-use Jikan\Model\Recommendations\UserRecommendations;
 use Jikan\Parser;
 
 /**
@@ -52,7 +51,7 @@ class RecentReviews extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Reviews\Recent\RecentAnimeReview[]|\Jikan\Model\Reviews\Recent\RecentMangaReview[]
      */
     public function getResults(): array
     {

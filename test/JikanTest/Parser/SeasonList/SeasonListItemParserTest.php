@@ -1,13 +1,14 @@
 <?php
 
-namespace Jikan\Parser\SeasonList;
+namespace JikanTest\Parser\SeasonList;
 
+use Jikan\Parser\SeasonList\SeasonListItemParser;
 use JikanTest\TestCase;
 
 class SeasonListItemParserTest extends TestCase
 {
     /**
-     * @var SeasonListItemParser
+     * @var \Jikan\Parser\SeasonList\SeasonListItemParser
      */
     private $parser;
 

@@ -20,7 +20,7 @@ class AnimeImageResource
     private $webp;
 
     /**
-     * @param string $imageUrl
+     * @param ?string $imageUrl
      * @return AnimeImageResource
      */
     public static function factory(?string $imageUrl) : self

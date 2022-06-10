@@ -42,7 +42,7 @@ class MoreInfoParser implements ParserInterface
     }
 
     /**
-     * @return string
+     * @return ?string
      * @throws \InvalidArgumentException
      */
     public function getMoreInfo(): ?string

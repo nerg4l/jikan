@@ -2,8 +2,6 @@
 
 namespace Jikan\Model\Common;
 
-use Jikan\Parser\Character\OgraphyParser;
-
 /**
  * Class Ography
  *

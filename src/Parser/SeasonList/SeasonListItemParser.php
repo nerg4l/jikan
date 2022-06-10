@@ -30,7 +30,7 @@ class SeasonListItemParser implements ParserInterface
     }
 
     /**
-     * @return SeasonListItem
+     * @return \Jikan\Model\SeasonList\SeasonListItem
      * @throws \InvalidArgumentException
      */
     public function getModel(): SeasonListItem

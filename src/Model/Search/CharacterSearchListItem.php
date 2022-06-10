@@ -34,7 +34,7 @@ class CharacterSearchListItem
     private $name;
 
     /**
-     * @var array
+     * @var string[]
      */
     private $alternativeNames;
 
@@ -104,7 +104,7 @@ class CharacterSearchListItem
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getAlternativeNames(): array
     {

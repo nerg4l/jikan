@@ -2,10 +2,8 @@
 
 namespace Jikan\Model\Genre;
 
-use Jikan\Model\Common\AnimeCard;
 use Jikan\Model\Common\Collection\Pagination;
 use Jikan\Model\Common\Collection\Results;
-use Jikan\Model\Common\MalUrl;
 use Jikan\Parser\Genre\AnimeGenreParser;
 
 /**
@@ -116,7 +114,7 @@ class AnimeGenre extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\AnimeCard[]
      */
     public function getResults(): array
     {

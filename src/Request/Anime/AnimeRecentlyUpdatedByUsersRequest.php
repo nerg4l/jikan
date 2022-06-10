@@ -52,7 +52,7 @@ class AnimeRecentlyUpdatedByUsersRequest implements RequestInterface
     /**
      * @return int
      */
-    public function getPage()
+    public function getPage(): int
     {
         return $this->page;
     }

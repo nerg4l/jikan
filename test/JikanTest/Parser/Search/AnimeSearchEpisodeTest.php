@@ -12,6 +12,11 @@ use JikanTest\TestCase;
 class AnimeSearchEpisodeTest extends TestCase
 {
     /**
+     * @var \Jikan\Model\Search\AnimeSearch
+     */
+    private $search;
+
+    /**
      * @test
      */
     public function it_gets_one_episode_airing_false()

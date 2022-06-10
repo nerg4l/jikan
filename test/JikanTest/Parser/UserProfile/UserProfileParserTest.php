@@ -1,6 +1,6 @@
 <?php
 
-namespace JikanTest\Parser\User\Profile;
+namespace JikanTest\Parser\UserProfile;
 
 use JikanTest\TestCase;
 
@@ -133,7 +133,8 @@ class UserProfileParserTest extends TestCase
     /**
      * @test
      */
-    public function it_gets_last_updates(){
+    public function it_gets_last_updates()
+    {
         $updates = $this->parser->getUserLastUpdates();
         self::assertContainsOnlyInstancesOf(\Jikan\Model\User\LastAnimeUpdate::class, $updates->getAnime());
         self::assertContainsOnlyInstancesOf(\Jikan\Model\User\LastMangaUpdate::class, $updates->getManga());

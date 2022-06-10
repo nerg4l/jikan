@@ -29,7 +29,7 @@ class MagazineListParser implements ParserInterface
     }
 
     /**
-     * @return \Jikan\Model\Magazine\Magazine
+     * @return \Jikan\Model\Magazine\MagazineList
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
@@ -39,7 +39,7 @@ class MagazineListParser implements ParserInterface
     }
 
     /**
-     * @return array|\Jikan\Model\Magazine\MagazineAnime[]
+     * @return \Jikan\Model\Magazine\MagazineListItem[]
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */

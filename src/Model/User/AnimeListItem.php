@@ -5,9 +5,7 @@ namespace Jikan\Model\User;
 use Jikan\Helper\Constants;
 use Jikan\Helper\JString;
 use Jikan\Helper\Parser;
-use Jikan\Model\Common\LicensorMeta;
 use Jikan\Model\Common\MalUrl;
-use Jikan\Model\Common\StudioMeta;
 use Jikan\Model\Resource\CommonImageResource\CommonImageResource;
 
 /**
@@ -153,22 +151,22 @@ class AnimeListItem
     private $addedToList;
 
     /**
-     * @var array
+     * @var \Jikan\Model\Common\MalUrl[]
      */
     private $studios = [];
 
     /**
-     * @var array
+     * @var \Jikan\Model\Common\MalUrl[]
      */
     private $licensors = [];
 
     /**
-     * @var array|MalUrl
+     * @var \Jikan\Model\Common\MalUrl[]
      */
     private $genres = [];
 
     /**
-     * @var array|MalUrl
+     * @var \Jikan\Model\Common\MalUrl[]
      */
     private $demographics = [];
 
@@ -273,7 +271,7 @@ class AnimeListItem
     }
 
     /**
-     * @return array|MalUrl
+     * @return \Jikan\Model\Common\MalUrl[]
      */
     public function getGenres()
     {
@@ -281,7 +279,7 @@ class AnimeListItem
     }
 
     /**
-     * @return array|MalUrl
+     * @return \Jikan\Model\Common\MalUrl[]
      */
     public function getDemographics()
     {
@@ -489,7 +487,7 @@ class AnimeListItem
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\MalUrl[]
      */
     public function getStudios(): array
     {
@@ -497,7 +495,7 @@ class AnimeListItem
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\MalUrl[]
      */
     public function getLicensors(): array
     {

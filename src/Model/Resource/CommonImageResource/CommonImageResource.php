@@ -20,7 +20,7 @@ class CommonImageResource
     private $webp;
 
     /**
-     * @param string $imageUrl
+     * @param ?string $imageUrl
      * @return CommonImageResource
      */
     public static function factory(?string $imageUrl) : self

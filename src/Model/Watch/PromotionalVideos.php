@@ -24,12 +24,12 @@ class PromotionalVideos extends Results implements Pagination
     private $lastVisiblePage = 1;
 
     /**
-     * @param WatchPromotionalVideosParser $parser
+     * @param \Jikan\Parser\Watch\WatchPromotionalVideosParser $parser
      *
-     * @return PromotionalVideos
+     * @return self
      * @throws \Exception
      */
-    public static function fromParser(WatchPromotionalVideosParser $parser): PromotionalVideos
+    public static function fromParser(WatchPromotionalVideosParser $parser): self
     {
         $instance = new self();
         $instance->results = $parser->getResults();
@@ -56,7 +56,7 @@ class PromotionalVideos extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Watch\PromotionalVideoListItem[]
      */
     public function getResults(): array
     {

@@ -10,7 +10,6 @@ use JikanTest\TestCase;
  */
 class PersonSearchTest extends TestCase
 {
-
     private $search;
     private $person;
 

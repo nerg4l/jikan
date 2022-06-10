@@ -26,8 +26,8 @@ class Jpg
 
 
     /**
-     * @param string $imageUrl
-     * @return Jpg
+     * @param ?string $imageUrl
+     * @return self
      */
     public static function factory(?string $imageUrl) : self
     {

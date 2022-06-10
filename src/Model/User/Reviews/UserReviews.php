@@ -47,7 +47,7 @@ class UserReviews extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\User\Reviews\UserAnimeReview[]|\Jikan\Model\User\Reviews\UserMangaReview[]
      */
     public function getResults(): array
     {

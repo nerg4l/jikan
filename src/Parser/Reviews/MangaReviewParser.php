@@ -9,7 +9,6 @@ use Jikan\Model\Common\MangaMeta;
 use Jikan\Model\Manga\MangaReview;
 use Jikan\Model\Manga\MangaReviewScores;
 use Jikan\Model\Reviews\Reviewer;
-use Jikan\Parser\Manga\MangaReviewScoresParser;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 

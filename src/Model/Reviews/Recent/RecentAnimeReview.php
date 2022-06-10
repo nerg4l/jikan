@@ -27,10 +27,10 @@ class RecentAnimeReview extends AnimeReview
 
     /**
      * @param AnimeReviewParser $parser
-     * @return RecentAnimeReview
+     * @return self
      * @throws \Exception
      */
-    public static function fromParser(AnimeReviewParser $parser): RecentAnimeReview
+    public static function fromParser(AnimeReviewParser $parser): self
     {
         $instance = new self();
 

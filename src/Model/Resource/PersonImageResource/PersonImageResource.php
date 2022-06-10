@@ -16,8 +16,8 @@ class PersonImageResource
 
 
     /**
-     * @param string $imageUrl
-     * @return PersonImageResource
+     * @param ?string $imageUrl
+     * @return self
      */
     public static function factory(?string $imageUrl) : self
     {

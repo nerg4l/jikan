@@ -51,7 +51,7 @@ class UserList extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Club\UserProfile[]
      */
     public function getResults(): array
     {

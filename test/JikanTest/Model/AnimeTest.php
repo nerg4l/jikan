@@ -30,6 +30,6 @@ class AnimeTest extends TestCase
      */
     public function it_gets_the_anime_airing(): void
     {
-        self::assertEquals(true,$this->anime->isAiring());
+        self::assertEquals(true, $this->anime->isAiring());
     }
 }

@@ -28,7 +28,7 @@ class Recommendations implements ParserInterface
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\Recommendation[]
      * @throws \InvalidArgumentException
      */
     public function getModel(): array

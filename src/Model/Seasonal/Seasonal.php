@@ -23,7 +23,7 @@ class Seasonal
     public $seasonYear;
 
     /**
-     * @var array|SeasonalAnime[]
+     * @var \Jikan\Model\Seasonal\SeasonalAnime[]
      */
     public $anime = [];
 
@@ -61,7 +61,7 @@ class Seasonal
     }
 
     /**
-     * @return array|SeasonalAnime[]
+     * @return \Jikan\Model\Seasonal\SeasonalAnime[]
      */
     public function getAnime()
     {

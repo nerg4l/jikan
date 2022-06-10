@@ -24,13 +24,13 @@ class MangaStatsScore
      */
     private $percentage;
 
-
     /**
+     * @param  int   $score
      * @param  int   $votes
      * @param  float $percentage
-     * @return MangaStatsScore
+     * @return self
      */
-    public static function setProperties(int $score, int $votes, float $percentage): MangaStatsScore
+    public static function setProperties(int $score, int $votes, float $percentage): self
     {
         $instance = new self();
 

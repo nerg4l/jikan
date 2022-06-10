@@ -20,20 +20,20 @@ class AnimeStaffPosition
     /**
      * @var AnimeMeta
      */
-    private $anime;
+    private $animeMeta;
 
     /**
-     * @param AnimeStaffPositionParser $parser
+     * @param \Jikan\Parser\Person\AnimeStaffPositionParser $parser
      *
-     * @return AnimeStaffPosition
+     * @return self
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(AnimeStaffPositionParser $parser): AnimeStaffPosition
+    public static function fromParser(AnimeStaffPositionParser $parser): self
     {
         $instance = new self();
         $instance->position = $parser->getPosition();
-        $instance->anime = $parser->getAnimeMeta();
+        $instance->animeMeta = $parser->getAnimeMeta();
 
         return $instance;
     }

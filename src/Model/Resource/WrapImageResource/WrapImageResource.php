@@ -15,7 +15,7 @@ class WrapImageResource
     private $jpg;
 
     /**
-     * @param string $imageUrl
+     * @param ?string $imageUrl
      * @return WrapImageResource
      */
     public static function factory(?string $imageUrl) : self

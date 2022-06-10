@@ -4,7 +4,6 @@ namespace JikanTest\Parser\Club;
 use Jikan\Model\Common\MalUrl;
 use Jikan\Model\Common\UserMetaBasic;
 use JikanTest\TestCase;
-use VCR\VCR;
 
 class ClubParserTest extends TestCase
 {
@@ -196,5 +195,4 @@ class ClubParserTest extends TestCase
             $this->parser->getCharacterRelations()
         );
     }
-
 }

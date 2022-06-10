@@ -2,7 +2,6 @@
 
 namespace JikanTest\Parser\Manga;
 
-use Jikan\Model\Manga\MangaStatsScore;
 use Jikan\Parser\Manga\MangaStatsParser;
 use JikanTest\TestCase;
 
@@ -45,7 +44,8 @@ class MangaStatsParserTest extends TestCase
     public function it_gets_score_attributes()
     {
         self::assertEquals(
-            7938, $this->mangaStatsParser->getScores()[10]->getVotes()
+            7938,
+            $this->mangaStatsParser->getScores()[10]->getVotes()
         );
     }
 }

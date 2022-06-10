@@ -20,7 +20,7 @@ class SeasonalAnime extends AnimeCard
     /**
      * @param Parser\Common\AnimeCardParser $parser
      *
-     * @return SeasonalAnime
+     * @return self
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */

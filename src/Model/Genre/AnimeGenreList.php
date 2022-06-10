@@ -2,9 +2,7 @@
 
 namespace Jikan\Model\Genre;
 
-use Jikan\Model\Common\MalUrl;
 use Jikan\Parser\Genre\AnimeGenreListParser;
-use Jikan\Parser\Genre\AnimeGenreParser;
 
 /**
  * Class AnimeGenre
@@ -15,22 +13,22 @@ class AnimeGenreList
 {
 
     /**
-     * @var array|AnimeGenreListItem[]
+     * @var \Jikan\Model\Genre\AnimeGenreListItem[]
      */
     public $genres = [];
 
     /**
-     * @var array|AnimeGenreListItem[]
+     * @var \Jikan\Model\Genre\AnimeGenreListItem[]
      */
     public $explicitGenres = [];
 
     /**
-     * @var array|AnimeGenreListItem[]
+     * @var \Jikan\Model\Genre\AnimeGenreListItem[]
      */
     public $themes = [];
 
     /**
-     * @var array|AnimeGenreListItem[]
+     * @var \Jikan\Model\Genre\AnimeGenreListItem[]
      */
     public $demographics = [];
 
@@ -38,7 +36,7 @@ class AnimeGenreList
     /**
      * @param AnimeGenreListParser $parser
      *
-     * @return AnimeGenre
+     * @return self
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
@@ -55,7 +53,7 @@ class AnimeGenreList
     }
 
     /**
-     * @return array|AnimeGenreListItem[]
+     * @return \Jikan\Model\Genre\AnimeGenreListItem[]
      */
     public function getExplicitGenres(): array
     {
@@ -63,7 +61,7 @@ class AnimeGenreList
     }
 
     /**
-     * @return array|AnimeGenreListItem[]
+     * @return \Jikan\Model\Genre\AnimeGenreListItem[]
      */
     public function getThemes(): array
     {
@@ -71,7 +69,7 @@ class AnimeGenreList
     }
 
     /**
-     * @return array|AnimeGenreListItem[]
+     * @return \Jikan\Model\Genre\AnimeGenreListItem[]
      */
     public function getDemographics(): array
     {
@@ -79,7 +77,7 @@ class AnimeGenreList
     }
 
     /**
-     * @return array|AnimeGenreListItem[]
+     * @return \Jikan\Model\Genre\AnimeGenreListItem[]
      */
     public function getGenres()
     {

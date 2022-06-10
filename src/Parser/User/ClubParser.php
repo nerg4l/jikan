@@ -30,7 +30,7 @@ class ClubParser
     }
 
     /**
-     * @return array
+     * @return Model\Common\ClubMeta[]
      * @throws \InvalidArgumentException
      */
     public function getClubs(): array

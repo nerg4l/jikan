@@ -18,7 +18,7 @@ class RecentRecommendationsRequest implements RequestInterface
     private $page;
 
     /**
-     * @var string
+     * @var ?string
      */
     private $type;
 
@@ -76,9 +76,9 @@ class RecentRecommendationsRequest implements RequestInterface
     }
 
     /**
-     * @return string
+     * @return ?string
      */
-    public function getType()
+    public function getType(): ?string
     {
         return $this->type;
     }

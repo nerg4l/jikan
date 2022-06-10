@@ -33,7 +33,7 @@ class YoutubeMeta
     private $images;
 
     /**
-     * @param string $embedUrl
+     * @param ?string $embedUrl
      * @return YoutubeMeta
      */
     public static function factory(?string $embedUrl) : self

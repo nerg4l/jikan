@@ -41,7 +41,7 @@ class UserSearchParser
     }
 
     /**
-     * @return UserSearchListItem[]
+     * @return \Jikan\Model\Search\UserSearchListItem[]
      * @throws \Exception
      * @throws \RuntimeException
      * @throws \InvalidArgumentException

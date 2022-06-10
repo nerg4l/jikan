@@ -3,7 +3,6 @@
 namespace Jikan\Model\Anime;
 
 use Jikan\Model\Common\PersonMeta;
-use Jikan\Model\Resource\PersonImageResource\PersonImageResource;
 use Jikan\Parser\Anime\StaffListItemParser;
 
 /**

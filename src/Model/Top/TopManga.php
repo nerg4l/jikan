@@ -25,9 +25,9 @@ class TopManga extends Results implements Pagination
     private $lastVisiblePage = 1;
 
     /**
-     * @param Parser\Search\AnimeSearchParser $parser
+     * @param \Jikan\Parser\Top\TopPeopleParser $parser
      *
-     * @return TopManga
+     * @return self
      * @throws \Exception
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
@@ -65,7 +65,7 @@ class TopManga extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Top\TopMangaListItem[]
      */
     public function getResults(): array
     {

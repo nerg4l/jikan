@@ -6,7 +6,6 @@ use Jikan\Helper\Constants;
 use Jikan\Helper\JString;
 use Jikan\Helper\Parser;
 use Jikan\Model;
-use Jikan\Parser\Common\AnimeCardParser;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 

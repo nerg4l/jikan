@@ -3,7 +3,6 @@
 namespace Jikan\Parser\Club;
 
 use Jikan\Model\Club\UserList;
-use Jikan\Model\Club\UserProfile;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -39,7 +38,7 @@ class UserListParser implements ParserInterface
     }
 
     /**
-     * @return UserProfile[]
+     * @return \Jikan\Model\Club\UserProfile[]
      */
     public function getResults(): array
     {

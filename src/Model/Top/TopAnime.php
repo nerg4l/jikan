@@ -65,7 +65,7 @@ class TopAnime extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Top\TopAnimeListItem[]
      */
     public function getResults(): array
     {

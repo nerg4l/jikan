@@ -43,7 +43,7 @@ class AnimeReviews extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Anime\AnimeReview[]
      */
     public function getResults(): array
     {

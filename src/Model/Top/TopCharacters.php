@@ -65,7 +65,7 @@ class TopCharacters extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Top\TopCharacterListItem[]
      */
     public function getResults(): array
     {

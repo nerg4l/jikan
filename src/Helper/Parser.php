@@ -63,7 +63,7 @@ class Parser
     }
 
     /**
-     * Extract the last property id from a mal url (e.g episode ID)
+     * Extract the last property id from a mal url (e.g. episode ID)
      *
      * @param string $url
      *
@@ -168,7 +168,7 @@ class Parser
     {
         $date = str_replace('  ', ' ', $date);
 
-        if (preg_match('~[a-zA-z]+ \d+, \d{4}~', $date)) {
+        if (preg_match('~[a-zA-Z]+ \d+, \d{4}~', $date)) {
             return new \DateTimeImmutable($date, new \DateTimeZone('UTC'));
         }
 

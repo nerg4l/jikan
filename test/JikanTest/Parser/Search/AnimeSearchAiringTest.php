@@ -12,6 +12,11 @@ use JikanTest\TestCase;
 class AnimeSearchAiringTest extends TestCase
 {
     /**
+     * @var \Jikan\Model\Search\AnimeSearch
+     */
+    private $search;
+
+    /**
      * @test
      */
     public function it_gets_airing_non_null()

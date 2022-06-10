@@ -3,7 +3,6 @@
 namespace Jikan\Model\Manga;
 
 use Jikan\Model\Common\CharacterMeta;
-use Jikan\Model\Resource\CharacterImageResource\CharacterImageResource;
 use Jikan\Parser\Character\CharacterListItemParser;
 
 /**

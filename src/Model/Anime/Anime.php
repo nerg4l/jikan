@@ -205,13 +205,13 @@ class Anime
     /**
      * Create an instance from an AnimeParser parser
      *
-     * @param AnimeParser $parser
+     * @param \Jikan\Parser\Anime\AnimeParser $parser
      *
-     * @return Anime
+     * @return self
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(AnimeParser $parser): Anime
+    public static function fromParser(AnimeParser $parser): self
     {
         $instance = new self();
         $instance->trailer = YoutubeMeta::factory($parser->getPreview());

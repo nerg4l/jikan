@@ -24,12 +24,12 @@ class Episodes extends Results implements Pagination
     private $lastVisiblePage = 1;
 
     /**
-     * @param WatchEpisodesParser $parser
+     * @param \Jikan\Parser\Watch\WatchEpisodesParser $parser
      *
-     * @return Episodes
+     * @return self
      * @throws \Exception
      */
-    public static function fromParser(WatchEpisodesParser $parser): Episodes
+    public static function fromParser(WatchEpisodesParser $parser): self
     {
         $instance = new self();
         $instance->results = $parser->getResults();

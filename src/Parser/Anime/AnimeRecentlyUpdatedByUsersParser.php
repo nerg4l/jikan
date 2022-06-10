@@ -3,7 +3,6 @@
 namespace Jikan\Parser\Anime;
 
 use Jikan\Model\Anime\AnimeUserUpdates;
-use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -29,7 +28,7 @@ class AnimeRecentlyUpdatedByUsersParser
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Anime\AnimeRecentlyUpdatedByUser[]
      * @throws \InvalidArgumentException
      */
     public function getResults(): array

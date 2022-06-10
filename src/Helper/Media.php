@@ -12,8 +12,8 @@ use Jikan\Model\Resource\YoutubeImageResource;
 class Media
 {
     /**
-     * @param string|null $url
-     * @return string
+     * @param ?string $url
+     * @return ?string
      */
     public static function youtubeIdFromUrl(?string $url) : ?string
     {
@@ -35,8 +35,8 @@ class Media
     }
 
     /**
-     * @param string $id
-     * @return string
+     * @param ?string $id
+     * @return ?string
      */
     public static function generateYoutubeUrlFromId(?string $id) : ?string
     {
@@ -48,7 +48,7 @@ class Media
     }
 
     /**
-     * @param string $id
+     * @param ?string $id
      * @return YoutubeImageResource
      */
     public static function generateYoutubeImageResource(?string $id) : YoutubeImageResource

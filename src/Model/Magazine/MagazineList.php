@@ -2,9 +2,7 @@
 
 namespace Jikan\Model\Magazine;
 
-use Jikan\Model\Common\MalUrl;
 use Jikan\Parser\Magazine\MagazineListParser;
-use Jikan\Parser\Magazine\MagazineParser;
 
 /**
  * Class Magazine
@@ -15,14 +13,14 @@ class MagazineList
 {
 
     /**
-     * @var array|MagazineListItem[]
+     * @var \Jikan\Model\Magazine\MagazineListItem[]
      */
     public $magazines = [];
 
     /**
-     * @param MagazineParser $parser
+     * @param \Jikan\Parser\Magazine\MagazineListParser $parser
      *
-     * @return Magazine
+     * @return self
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
@@ -35,7 +33,7 @@ class MagazineList
     }
 
     /**
-     * @return array|MagazineListItem[]
+     * @return \Jikan\Model\Magazine\MagazineListItem[]
      */
     public function getMagazines()
     {

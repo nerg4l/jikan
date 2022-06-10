@@ -98,6 +98,4 @@ class AnimeRecommendationParserTest extends TestCase
             $this->model
         );
     }
-
-
 }

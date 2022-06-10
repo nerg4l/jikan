@@ -3,10 +3,7 @@
 namespace Jikan\Parser\User;
 
 use Jikan\Helper\Constants;
-use Jikan\Helper\Parser;
 use Jikan\Model;
-use Jikan\Model\User\AnimeStats;
-use Jikan\Model\User\MangaStats;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**

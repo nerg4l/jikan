@@ -2,9 +2,7 @@
 
 namespace Jikan\Parser\Manga;
 
-use Jikan\Model\Manga\Manga;
 use Jikan\Model\Manga\MangaUserUpdates;
-use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -30,7 +28,7 @@ class MangaRecentlyUpdatedByUsersParser
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Manga\MangaRecentlyUpdatedByUser[]
      * @throws \InvalidArgumentException
      */
     public function getResults(): array

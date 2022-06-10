@@ -42,7 +42,7 @@ class VoiceActingRoleParser implements ParserInterface
 
 
     /**
-     * @return string
+     * @return ?string
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */

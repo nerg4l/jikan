@@ -46,7 +46,7 @@ class AnimeReviewsParser implements ParserInterface
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Anime\AnimeReview[]
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */

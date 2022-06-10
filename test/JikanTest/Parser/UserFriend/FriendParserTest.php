@@ -1,6 +1,6 @@
 <?php
 
-namespace JikanTest\Parser\User\Friends;
+namespace JikanTest\Parser\UserFriend;
 
 use JikanTest\TestCase;
 

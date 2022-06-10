@@ -66,7 +66,5 @@ class DateRangeTest extends TestCase
         self::assertEquals(1, $date->getUntilProp()->getDay());
         self::assertEquals(1, $date->getUntilProp()->getMonth());
         self::assertEquals(2016, $date->getUntilProp()->getYear());
-
-
     }
 }

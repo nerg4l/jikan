@@ -50,7 +50,7 @@ class Favorites
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\User\FavoriteAnime[]
      */
     public function getAnime(): array
     {
@@ -58,7 +58,7 @@ class Favorites
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\User\FavoriteManga[]
      */
     public function getManga(): array
     {
@@ -66,7 +66,7 @@ class Favorites
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\CharacterMeta[]
      */
     public function getCharacters(): array
     {
@@ -74,7 +74,7 @@ class Favorites
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\PersonMeta[]
      */
     public function getPeople(): array
     {

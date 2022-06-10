@@ -110,7 +110,7 @@ class AnimeCard
     /**
      * @param Parser\Common\AnimeCardParser $parser
      *
-     * @return AnimeCard
+     * @return \Jikan\Model\Common\AnimeCard
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */

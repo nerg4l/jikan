@@ -2,9 +2,6 @@
 
 namespace Jikan\Model\Reviews;
 
-use Jikan\Model\Anime\AnimeReviewScores;
-use Jikan\Model\Manga\MangaReviewScores;
-
 /**
  * Class Review
  *

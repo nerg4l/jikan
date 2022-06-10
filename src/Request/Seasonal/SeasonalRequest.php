@@ -50,11 +50,11 @@ class SeasonalRequest implements RequestInterface
     public function getPath(): string
     {
         if ($this->later) {
-            return sprintf('https://myanimelist.net/anime/season/later');
+            return 'https://myanimelist.net/anime/season/later';
         }
 
         if ($this->year === null || $this->season === null) {
-            return sprintf('https://myanimelist.net/anime/season');
+            return 'https://myanimelist.net/anime/season';
         }
 
         return sprintf('https://myanimelist.net/anime/season/%s/%s', $this->year, $this->season);
@@ -71,7 +71,7 @@ class SeasonalRequest implements RequestInterface
     /**
      * @return string|null
      */
-    public function getSeason()
+    public function getSeason(): ?string
     {
         return $this->season;
     }

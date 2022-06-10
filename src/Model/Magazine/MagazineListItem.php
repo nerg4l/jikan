@@ -2,9 +2,7 @@
 
 namespace Jikan\Model\Magazine;
 
-use Jikan\Model\Common\MalUrl;
 use Jikan\Parser\Magazine\MagazineListItemParser;
-use Jikan\Parser\Magazine\MagazineParser;
 
 /**
  * Class Magazine
@@ -34,9 +32,9 @@ class MagazineListItem
     private $count;
 
     /**
-     * @param MagazineParser $parser
+     * @param \Jikan\Parser\Magazine\MagazineListItemParser $parser
      *
-     * @return Magazine
+     * @return self
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */

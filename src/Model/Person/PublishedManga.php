@@ -24,13 +24,13 @@ class PublishedManga
 
 
     /**
-     * @param PublishedMangaParser $parser
+     * @param \Jikan\Parser\Person\PublishedMangaParser $parser
      *
-     * @return PublishedManga
+     * @return self
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
-    public static function fromParser(PublishedMangaParser $parser): PublishedManga
+    public static function fromParser(PublishedMangaParser $parser): self
     {
         $instance = new self();
         $instance->position = $parser->getPosition();

@@ -2,7 +2,6 @@
 
 namespace Jikan\Model\Anime;
 
-use Jikan\Model\Resource\CommonImageResource\CommonImageResource;
 use Jikan\Model\Reviews\Reviewer;
 use Jikan\Parser\Reviews\AnimeReviewParser;
 
@@ -20,10 +19,10 @@ class AnimeReview extends \Jikan\Model\Reviews\AnimeReview
 
     /**
      * @param AnimeReviewParser $parser
-     * @return AnimeReview
+     * @return self
      * @throws \Exception
      */
-    public static function fromParser(AnimeReviewParser $parser): AnimeReview
+    public static function fromParser(AnimeReviewParser $parser): self
     {
         $instance = new self();
 

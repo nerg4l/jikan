@@ -60,7 +60,7 @@ class CharacterSearchListItemParser
     }
 
     /**
-     * @return array
+     * @return string[]
      * @throws \InvalidArgumentException
      */
     public function getAlternativeNames(): array

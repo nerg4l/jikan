@@ -3,7 +3,6 @@
 namespace Jikan\Model\User;
 
 use Jikan\Model\Common\CommonMeta;
-use Jikan\Model\Common\ItemMeta;
 
 /**
  * Class FavoriteListEntry

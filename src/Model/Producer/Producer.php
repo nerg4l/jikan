@@ -4,8 +4,6 @@ namespace Jikan\Model\Producer;
 
 use Jikan\Model\Common\Collection\Pagination;
 use Jikan\Model\Common\Collection\Results;
-use Jikan\Model\Common\MalUrl;
-use Jikan\Model\Top\TopPeople;
 use Jikan\Parser\Producer\ProducerParser;
 
 /**
@@ -103,7 +101,7 @@ class Producer extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\AnimeCard[]
      */
     public function getResults(): array
     {

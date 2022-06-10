@@ -122,6 +122,4 @@ class AnimeRecentlyUpdatedByUsersParserTest extends TestCase
             $this->model->getResults()[0]->getDate()
         );
     }
-
-
 }

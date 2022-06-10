@@ -25,7 +25,7 @@ class AnimeEpisodeRequest implements RequestInterface
      * AnimeEpisodeRequest constructor.
      *
      * @param int $id
-     * @param int $page
+     * @param int $episodeId
      */
     public function __construct(int $id, int $episodeId)
     {

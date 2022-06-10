@@ -4,7 +4,6 @@ namespace Jikan\Parser\Anime;
 
 use Jikan\Helper\Parser;
 use Jikan\Model\Anime\EpisodeListItem;
-use Jikan\Model\Common\DateRange;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -152,7 +151,7 @@ class EpisodeListItemParser implements ParserInterface
     }
 
     /**
-     * @return string
+     * @return ?string
      * @throws \InvalidArgumentException
      */
     public function getVideoUrl(): ?string
@@ -167,7 +166,7 @@ class EpisodeListItemParser implements ParserInterface
     }
 
     /**
-     * @return string
+     * @return ?string
      * @throws \InvalidArgumentException
      */
     public function getForumUrl(): ?string

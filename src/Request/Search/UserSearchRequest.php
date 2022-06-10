@@ -98,7 +98,7 @@ class UserSearchRequest implements RequestInterface
     }
 
     /**
-     * @param int $page
+     * @param ?int $page
      * @return UserSearchRequest
      */
     public function setPage(?int $page): UserSearchRequest

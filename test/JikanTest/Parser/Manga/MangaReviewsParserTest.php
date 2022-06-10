@@ -155,6 +155,4 @@ class MangaReviewsParserTest extends TestCase
             $this->review->getReview()
         );
     }
-
-
 }

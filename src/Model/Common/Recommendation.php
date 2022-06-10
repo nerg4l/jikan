@@ -2,11 +2,6 @@
 
 namespace Jikan\Model\Common;
 
-use Jikan\Helper\MalUrlExtractor;
-use Jikan\Helper\Parser;
-use Jikan\Model\Resource\CommonImageResource\CommonImageResource;
-use Jikan\Parser\Common\MalUrlParser;
-
 /**
  * Class Recommendation
  *

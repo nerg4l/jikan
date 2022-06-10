@@ -15,8 +15,8 @@ class Jpg
     private $imageUrl;
 
     /**
-     * @param string $imageUrl
-     * @return Jpg
+     * @param ?string $imageUrl
+     * @return self
      */
     public static function factory(?string $imageUrl) : self
     {
@@ -32,7 +32,7 @@ class Jpg
      */
     public function __toString() : string
     {
-        return $this->getJpg()->getImageUrl();
+        return $this->getImageUrl();
     }
 
     /**

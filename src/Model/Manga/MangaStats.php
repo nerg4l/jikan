@@ -42,7 +42,7 @@ class MangaStats
     private $total;
 
     /**
-     * @var array
+     * @var \Jikan\Model\Manga\MangaStatsScore[]
      */
     private $scores;
 
@@ -115,7 +115,7 @@ class MangaStats
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Manga\MangaStatsScore[]
      */
     public function getScores(): array
     {

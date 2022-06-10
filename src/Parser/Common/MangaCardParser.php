@@ -5,6 +5,7 @@ namespace Jikan\Parser\Common;
 use Jikan\Helper\JString;
 use Jikan\Helper\Parser;
 use Jikan\Model;
+use Jikan\Model\Common\MangaCard;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -35,9 +36,9 @@ class MangaCardParser implements ParserInterface
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public function getModel(): Model\Common\MangaCard
+    public function getModel(): MangaCard
     {
-        return Model\Common\MangaCard::parseMangaCard($this);
+        return MangaCard::parseMangaCard($this);
     }
 
     /**
@@ -111,7 +112,6 @@ class MangaCardParser implements ParserInterface
     {
         // This information is no longer available
         return null;
-        return JString::cleanse($this->crawler->filterXPath('//span[contains(@class, "source")]')->text());
     }
 
     /**

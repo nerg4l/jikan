@@ -21,8 +21,8 @@ class CharacterImageResource
 
 
     /**
-     * @param string $imageUrl
-     * @return CharacterImageResource
+     * @param ?string $imageUrl
+     * @return self
      */
     public static function factory(?string $imageUrl) : self
     {

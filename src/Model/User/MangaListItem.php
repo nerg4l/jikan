@@ -5,7 +5,6 @@ namespace Jikan\Model\User;
 use Jikan\Helper\Constants;
 use Jikan\Helper\JString;
 use Jikan\Helper\Parser;
-use Jikan\Model\Common\MagazineMeta;
 use Jikan\Model\Common\MalUrl;
 use Jikan\Model\Resource\CommonImageResource\CommonImageResource;
 
@@ -127,17 +126,17 @@ class MangaListItem
     private $addedToList;
 
     /**
-     * @var array
+     * @var \Jikan\Model\Common\MalUrl[]
      */
     private $magazines = [];
 
     /**
-     * @var array|MalUrl
+     * @var \Jikan\Model\Common\MalUrl[]
      */
     private $genres = [];
 
     /**
-     * @var array|MalUrl
+     * @var \Jikan\Model\Common\MalUrl[]
      */
     private $demographics = [];
 
@@ -239,7 +238,7 @@ class MangaListItem
     }
 
     /**
-     * @return array|MalUrl
+     * @return \Jikan\Model\Common\MalUrl[]
      */
     public function getGenres()
     {
@@ -247,7 +246,7 @@ class MangaListItem
     }
 
     /**
-     * @return array|MalUrl
+     * @return \Jikan\Model\Common\MalUrl[]
      */
     public function getDemographics()
     {
@@ -399,7 +398,7 @@ class MangaListItem
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\MalUrl[]
      */
     public function getMagazines(): array
     {

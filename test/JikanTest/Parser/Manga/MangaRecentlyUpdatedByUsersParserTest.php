@@ -144,6 +144,4 @@ class MangaRecentlyUpdatedByUsersParserTest extends TestCase
             $this->parser->getResults()[0]->getDate()
         );
     }
-
-
 }

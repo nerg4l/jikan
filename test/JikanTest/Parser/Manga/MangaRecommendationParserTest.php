@@ -98,6 +98,4 @@ class MangaRecommendationParserTest extends TestCase
             $this->model[0]->getVotes()
         );
     }
-
-
 }

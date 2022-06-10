@@ -25,7 +25,7 @@ class AnimeUserUpdates extends Results implements Pagination
     private $lastVisiblePage = 1;
 
     /**
-     * @param Parser\Search\AnimeSearchParser $parser
+     * @param \Jikan\Parser\Anime\AnimeRecentlyUpdatedByUsersParser $parser
      *
      * @return AnimeUserUpdates
      * @throws \Exception
@@ -65,7 +65,7 @@ class AnimeUserUpdates extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Anime\AnimeRecentlyUpdatedByUser[]
      */
     public function getResults(): array
     {

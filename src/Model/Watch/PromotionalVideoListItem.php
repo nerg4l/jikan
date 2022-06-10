@@ -4,8 +4,6 @@ namespace Jikan\Model\Watch;
 
 use Jikan\Model\Common\AnimeMeta;
 use Jikan\Model\Common\YoutubeMeta;
-use Jikan\Model\Resource\CommonImageResource\CommonImageResource;
-use Jikan\Parser\Watch\EpisodeListItemParser;
 use Jikan\Parser\Watch\PromotionalVideoListItemParser;
 
 /**
@@ -31,9 +29,9 @@ class PromotionalVideoListItem
     private $trailer;
 
     /**
-     * @param EpisodeListItemParser $parser
+     * @param \Jikan\Parser\Watch\PromotionalVideoListItemParser $parser
      *
-     * @return EpisodeListItem
+     * @return self
      * @throws \Exception
      */
     public static function fromParser(PromotionalVideoListItemParser $parser): self

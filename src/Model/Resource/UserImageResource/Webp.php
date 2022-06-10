@@ -15,8 +15,8 @@ class Webp
     private $imageUrl;
 
     /**
-     * @param string $imageUrl
-     * @return \Jikan\Model\Resource\AnimeImageResource\Webp
+     * @param ?string $imageUrl
+     * @return self
      */
     public static function factory(?string $imageUrl) : self
     {

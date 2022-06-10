@@ -3,7 +3,6 @@
 namespace Jikan\Model\User;
 
 use Jikan\Model\Common\MalUrl;
-use Jikan\Parser\Common\MalUrlParser;
 
 /**
  * Class MalUrl
@@ -35,8 +34,7 @@ class FavoriteCharacterRelatedEntry
     /**
      * Genre constructor.
      *
-     * @param string $name
-     * @param string $url
+     * @param \Jikan\Model\Common\MalUrl $malUrl
      */
     public function __construct(MalUrl $malUrl)
     {

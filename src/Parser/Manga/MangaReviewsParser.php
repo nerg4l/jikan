@@ -35,7 +35,7 @@ class MangaReviewsParser implements ParserInterface
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Manga\MangaReview[]
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */

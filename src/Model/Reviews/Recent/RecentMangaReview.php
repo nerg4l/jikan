@@ -30,12 +30,12 @@ class RecentMangaReview extends MangaReview
      *
      * @param MangaReviewParser $parser
      *
-     * @return RecentMangaReview
+     * @return self
      * @throws \Exception
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(MangaReviewParser $parser): RecentMangaReview
+    public static function fromParser(MangaReviewParser $parser): self
     {
         $instance = new self();
 

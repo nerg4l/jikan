@@ -30,7 +30,7 @@ class MangaGenreListItemParser implements ParserInterface
     }
 
     /**
-     * @return \Jikan\Model\Genre\MangaGenre
+     * @return \Jikan\Model\Genre\MangaGenreListItem
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */

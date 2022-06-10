@@ -42,7 +42,7 @@ class MagazineParser implements ParserInterface
     }
 
     /**
-     * @return array|\Jikan\Model\Magazine\MagazineManga[]
+     * @return \Jikan\Model\Common\MangaCard[]
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */

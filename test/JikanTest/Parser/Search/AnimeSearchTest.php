@@ -10,7 +10,6 @@ use JikanTest\TestCase;
  */
 class AnimeSearchTest extends TestCase
 {
-
     private $search;
     private $anime;
 

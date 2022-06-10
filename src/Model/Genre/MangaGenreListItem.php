@@ -3,7 +3,6 @@
 namespace Jikan\Model\Genre;
 
 use Jikan\Parser\Genre\MangaGenreListItemParser;
-use Jikan\Parser\Genre\MangaGenreListParser;
 
 /**
  * Class MangaGenreListItem

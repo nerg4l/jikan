@@ -2,7 +2,6 @@
 
 namespace Jikan\Parser\Watch;
 
-use Jikan\Helper\JString;
 use Jikan\Helper\Parser;
 use Jikan\Model\Common\AnimeMeta;
 use Jikan\Model\Watch\EpisodeListItem;
@@ -99,8 +98,6 @@ class EpisodeListItemParser implements ParserInterface
      */
     public function getEpisodes(): array
     {
-        $episodes = [];
-
         $node = $this->crawler->filterXPath(
             '//div[contains(@class, "video-list")]
             /div[contains(@class, "info-container")]/div[contains(@class, "title")]/a'

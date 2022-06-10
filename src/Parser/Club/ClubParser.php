@@ -258,7 +258,7 @@ class ClubParser implements ParserInterface
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\UserMetaBasic[]
      */
     public function getStaff(): array
     {

@@ -50,7 +50,7 @@ class UserReviewsRequest implements RequestInterface
     }
 
     /**
-     * @return int
+     * @return ?int
      */
     public function getPage(): ?int
     {

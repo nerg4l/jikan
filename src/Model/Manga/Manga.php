@@ -171,13 +171,13 @@ class Manga
     /**
      * Create an instance from an MangaParser parser
      *
-     * @param MangaParser $parser
+     * @param \Jikan\Parser\Manga\MangaParser $parser
      *
-     * @return Manga
+     * @return self
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(MangaParser $parser): Manga
+    public static function fromParser(MangaParser $parser): self
     {
         $instance = new self();
 

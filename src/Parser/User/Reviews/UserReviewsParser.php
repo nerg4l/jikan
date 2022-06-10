@@ -34,6 +34,10 @@ class UserReviewsParser
         return Model\User\Reviews\UserReviews::fromParser($this);
     }
 
+    /**
+     * @return \Jikan\Model\User\Reviews\UserAnimeReview[]|\Jikan\Model\User\Reviews\UserMangaReview[]
+     * @throws \Exception
+     */
     public function getReviews() : array
     {
         $node = $this->crawler->filterXPath('//*[@id="content"]/table/tr/td[2]/div[@class="borderDark"]');
@@ -42,8 +46,7 @@ class UserReviewsParser
             return [];
         }
 
-        return $node->each(function (Crawler $crawler) {
-
+        return array_filter($node->each(function (Crawler $crawler) {
             // Anime Review
             if ($crawler->filterXPath('//div[2]/div[2]/small[1]')->text() === '(Anime)') {
                 return Model\User\Reviews\UserAnimeReview::fromParser(new AnimeReviewParser($crawler));
@@ -53,7 +56,9 @@ class UserReviewsParser
             if ($crawler->filterXPath('//div[2]/div[2]/small[1]')->text() === '(Manga)') {
                 return Model\User\Reviews\UserMangaReview::fromParser(new MangaReviewParser($crawler));
             }
-        });
+
+            return null;
+        }));
     }
 
     public function hasNextPage() : bool

@@ -2,7 +2,6 @@
 
 namespace Jikan\Model\Recommendations;
 
-use Jikan\Helper\Parser;
 use Jikan\Model\Common\CommonMeta;
 
 /**
@@ -38,7 +37,7 @@ class RecommendationListItem
     private $user;
 
     /**
-     * @param \Jikan\Parser\Common\Recommendation $parser
+     * @param \Jikan\Parser\Recommendations\RecommendationListItemParser $parser
      *
      * @return self
      * @throws \InvalidArgumentException

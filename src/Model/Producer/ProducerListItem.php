@@ -2,9 +2,7 @@
 
 namespace Jikan\Model\Producer;
 
-use Jikan\Model\Common\MalUrl;
 use Jikan\Parser\Producer\ProducerListItemParser;
-use Jikan\Parser\Producer\ProducerParser;
 
 /**
  * Class Producer
@@ -34,9 +32,9 @@ class ProducerListItem
     private $count;
 
     /**
-     * @param ProducerParser $parser
+     * @param \Jikan\Parser\Producer\ProducerListItemParser $parser
      *
-     * @return Producer
+     * @return self
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */

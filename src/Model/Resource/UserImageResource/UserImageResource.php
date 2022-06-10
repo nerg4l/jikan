@@ -20,8 +20,8 @@ class UserImageResource
     private $webp;
 
     /**
-     * @param string $imageUrl
-     * @return UserImageResource
+     * @param ?string $imageUrl
+     * @return self
      */
     public static function factory(?string $imageUrl) : self
     {

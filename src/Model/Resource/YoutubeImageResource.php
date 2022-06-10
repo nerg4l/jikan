@@ -36,7 +36,7 @@ class YoutubeImageResource
 
 
     /**
-     * @param string $id
+     * @param ?string $id
      * @return YoutubeImageResource
      */
     public static function factory(?string $id) : self

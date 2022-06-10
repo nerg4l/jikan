@@ -3,7 +3,6 @@
 namespace JikanTest\Parser\Genre;
 
 use Goutte\Client;
-use Jikan\Model\Common\MalUrl;
 use Jikan\Model\Common\MangaCard;
 use Jikan\Parser\Genre\MangaGenreParser;
 use JikanTest\TestCase;

@@ -32,7 +32,7 @@ class MangaMoreInfo
     }
 
     /**
-     * @return string
+     * @return ?string
      */
     public function getMoreInfo(): ?string
     {

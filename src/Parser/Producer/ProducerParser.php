@@ -42,7 +42,7 @@ class ProducerParser implements ParserInterface
     }
 
     /**
-     * @return array|\Jikan\Model\Producer\ProducerAnime[]
+     * @return \Jikan\Model\Common\AnimeCard[]
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */

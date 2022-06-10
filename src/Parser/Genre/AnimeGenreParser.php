@@ -42,7 +42,7 @@ class AnimeGenreParser implements ParserInterface
     }
 
     /**
-     * @return array|\Jikan\Model\Genre\AnimeGenre[]
+     * @return \Jikan\Model\Common\AnimeCard[]
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */

@@ -10,7 +10,7 @@ namespace Jikan\Model\Anime;
 class AnimeStatsScore
 {
     /**
-     * @var
+     * @var int
      */
     private $score;
 
@@ -26,11 +26,12 @@ class AnimeStatsScore
 
 
     /**
+     * @param  int   $score
      * @param  int   $votes
      * @param  float $percentage
-     * @return AnimeStats
+     * @return self
      */
-    public static function setProperties(int $score, int $votes, float $percentage): AnimeStatsScore
+    public static function setProperties(int $score, int $votes, float $percentage): self
     {
         $instance = new self();
 
@@ -42,9 +43,9 @@ class AnimeStatsScore
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getScore()
+    public function getScore(): int
     {
         return $this->score;
     }

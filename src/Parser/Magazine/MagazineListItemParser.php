@@ -3,7 +3,7 @@
 namespace Jikan\Parser\Magazine;
 
 use Jikan\Helper\Constants;
-use Jikan\Model;
+use Jikan\Model\Magazine\MagazineListItem;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -34,9 +34,9 @@ class MagazineListItemParser implements ParserInterface
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public function getModel(): Model\Magazine\MagazineListItem
+    public function getModel(): MagazineListItem
     {
-        return Model\Magazine\MagazineListItem::fromParser($this);
+        return MagazineListItem::fromParser($this);
     }
 
     /**

@@ -37,9 +37,7 @@ class DateProp
     }
 
     /**
-     * @param  int|null $day
-     * @param  int|null $month
-     * @param  int|null $year
+     * @param  ?\DateTimeImmutable $dateTimeImmutable
      * @return DateProp
      */
     public static function fromDateTime(?\DateTimeImmutable $dateTimeImmutable): DateProp

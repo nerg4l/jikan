@@ -19,12 +19,12 @@ class Animeography extends Ography
     private $anime;
 
     /**
-     * @param AnimeographyParser $parser
+     * @param \Jikan\Parser\Character\AnimeographyParser $parser
      *
-     * @return Animeography
+     * @return self
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(AnimeographyParser $parser): Animeography
+    public static function fromParser(AnimeographyParser $parser): self
     {
         $instance = new self();
 

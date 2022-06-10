@@ -2,7 +2,6 @@
 
 namespace Jikan\Model\Manga;
 
-use Jikan\Model\Resource\CommonImageResource\CommonImageResource;
 use Jikan\Model\Reviews\Reviewer;
 use Jikan\Parser\Reviews\MangaReviewParser;
 

@@ -5,7 +5,6 @@ namespace Jikan\Parser\Common;
 use Jikan\Helper\Constants;
 use Jikan\Helper\Parser;
 use Jikan\Model\Common\CommonMeta;
-use Jikan\Model\Common\ItemMeta;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 

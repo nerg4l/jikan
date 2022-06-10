@@ -35,6 +35,7 @@ class Friends extends Results implements Pagination
 
         $instance->results = $parser->getResults();
         $instance->hasNextPage = $parser->getHasNextPage();
+        // TODO: Friends are paginated differently, only next and previous link are available
         $instance->lastVisiblePage = $parser->getLastPage();
 
         return $instance;
@@ -65,7 +66,7 @@ class Friends extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\User\Friend[]
      */
     public function getResults(): array
     {

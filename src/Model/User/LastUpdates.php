@@ -7,12 +7,12 @@ use Jikan\Parser\User\Profile\LastUpdatesParser;
 class LastUpdates
 {
     /**
-     * @var array
+     * @var \Jikan\Model\User\LastAnimeUpdate[]
      */
     private $anime;
 
     /**
-     * @var array
+     * @var \Jikan\Model\User\LastMangaUpdate[]
      */
     private $manga;
 
@@ -25,7 +25,7 @@ class LastUpdates
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\User\LastAnimeUpdate[]
      */
     public function getAnime(): array
     {
@@ -33,7 +33,7 @@ class LastUpdates
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\User\LastMangaUpdate[]
      */
     public function getManga(): array
     {

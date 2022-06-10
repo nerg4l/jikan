@@ -42,7 +42,7 @@ class MangaGenreParser implements ParserInterface
     }
 
     /**
-     * @return array|\Jikan\Model\Genre\MangaGenre[]
+     * @return \Jikan\Model\Common\MangaCard[]
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */

@@ -48,7 +48,7 @@ class UserRecommendations extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Recommendations\RecommendationListItem[]
      */
     public function getResults(): array
     {

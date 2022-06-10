@@ -150,7 +150,7 @@ class MangaStatsParser implements ParserInterface
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Manga\MangaStatsScore[]
      * @throws \InvalidArgumentException
      */
     public function getScores(): array

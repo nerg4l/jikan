@@ -11,7 +11,6 @@ use Jikan\MyAnimeList\MalClient;
  */
 class CharacterSearchTest extends TestCase
 {
-
     private $search;
     private $anime;
 

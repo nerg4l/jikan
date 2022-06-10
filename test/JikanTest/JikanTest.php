@@ -3,7 +3,6 @@
 namespace JikanTest;
 
 use DateTimeImmutable;
-use Jikan\Exception\BadResponseException;
 use Jikan\Helper\Constants;
 use Jikan\MyAnimeList\MalClient;
 use Jikan\Model\Forum\ForumTopic;

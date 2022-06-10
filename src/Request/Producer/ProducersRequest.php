@@ -16,6 +16,6 @@ class ProducersRequest implements RequestInterface
      */
     public function getPath(): string
     {
-        return sprintf('https://myanimelist.net/anime/producer');
+        return 'https://myanimelist.net/anime/producer';
     }
 }

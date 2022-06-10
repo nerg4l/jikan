@@ -93,7 +93,7 @@ class NewsListItemParser implements ParserInterface
     }
 
     /**
-     * @return \DateTimeImmutable
+     * @return ?\DateTimeImmutable
      * @throws \InvalidArgumentException
      */
     public function getDate(): ?\DateTimeImmutable

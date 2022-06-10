@@ -338,9 +338,9 @@ class MangaSearchRequest implements RequestInterface
     }
 
     /**
-     * @return string
+     * @return ?string
      */
-    public function getType()
+    public function getType(): ?string
     {
         return $this->type;
     }
@@ -348,7 +348,7 @@ class MangaSearchRequest implements RequestInterface
     /**
      * @return float
      */
-    public function getScore()
+    public function getScore(): float
     {
         return $this->score;
     }

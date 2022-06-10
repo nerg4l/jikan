@@ -43,7 +43,7 @@ class MangaReviews extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Manga\MangaReview[]
      */
     public function getResults(): array
     {

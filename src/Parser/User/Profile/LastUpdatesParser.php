@@ -36,7 +36,7 @@ class LastUpdatesParser
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\User\LastAnimeUpdate[]
      *
      */
     public function getLastAnimeUpdates(): array
@@ -53,7 +53,7 @@ class LastUpdatesParser
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\User\LastMangaUpdate[]
      *
      */
     public function getLastMangaUpdates(): array
@@ -90,10 +90,10 @@ class LastUpdatesParser
                 $progressed = null;
 
                 $progressedTotalSeparatorIndex = strpos($progressTypeValueUnparsed, '/');
-                if ($progressedTotalSeparatorIndex != false) {
+                if ($progressedTotalSeparatorIndex !== false) {
                     $totalUnparsed = trim(substr($progressTypeValueUnparsed, $progressedTotalSeparatorIndex + 1));
 
-                    preg_match('~(\d+)\/(\d+)~', $progressTypeValueUnparsed, $progress);
+                    preg_match('~(\d+)/(\d+)~', $progressTypeValueUnparsed, $progress);
 
                     $progressed = $progress[1] ?? null;
                     $total = $progress[2] ?? null;

@@ -32,7 +32,7 @@ class UserProfileParser implements ParserInterface
     }
 
     /**
-     * Return the model
+     * @return \Jikan\Model\Club\UserProfile
      */
     public function getModel(): UserProfile
     {

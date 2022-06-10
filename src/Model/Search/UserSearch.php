@@ -65,7 +65,7 @@ class UserSearch extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Search\UserSearchListItem[]
      */
     public function getResults(): array
     {

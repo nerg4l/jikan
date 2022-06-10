@@ -16,6 +16,6 @@ class MagazinesRequest implements RequestInterface
      */
     public function getPath(): string
     {
-        return sprintf('https://myanimelist.net/manga/magazine');
+        return 'https://myanimelist.net/manga/magazine';
     }
 }

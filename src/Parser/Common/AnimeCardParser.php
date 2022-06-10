@@ -5,6 +5,8 @@ namespace Jikan\Parser\Common;
 use Jikan\Helper\JString;
 use Jikan\Helper\Parser;
 use Jikan\Model;
+use Jikan\Model\Common\AnimeCard;
+use Jikan\Model\Seasonal\SeasonalAnime;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -31,11 +33,11 @@ class AnimeCardParser implements ParserInterface
     }
 
     /**
-     * @return Model\Common\AnimeCard
+     * @return \Jikan\Model\Common\AnimeCard
      */
-    public function getModel(): Model\Common\AnimeCard
+    public function getModel(): AnimeCard
     {
-        return Model\Common\AnimeCard::parseAnimeCard($this);
+        return AnimeCard::parseAnimeCard($this);
     }
 
     /**
@@ -43,9 +45,9 @@ class AnimeCardParser implements ParserInterface
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public function getSeasonalModel(): Model\Seasonal\SeasonalAnime
+    public function getSeasonalModel(): SeasonalAnime
     {
-        return Model\Seasonal\SeasonalAnime::parseSeasonalAnime($this);
+        return SeasonalAnime::parseSeasonalAnime($this);
     }
 
     /**
@@ -199,22 +201,6 @@ class AnimeCardParser implements ParserInterface
     {
         // this information is no longer available
         return null;
-        $text = $this->crawler->filterXPath('//div[contains(@class, "info")]');
-
-        if (!$text->count()) {
-            return null;
-        }
-
-        $text = JString::cleanse($text->text());
-        preg_match('/^([a-zA-Z-\.]+)/', $text, $matches);
-
-        $type = $matches[1];
-
-        if ($type === '-') {
-            $type = 'Unknown';
-        }
-
-        return $type;
     }
 
     /**

@@ -40,7 +40,7 @@ class RecentReviewsParser
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Reviews\Recent\RecentAnimeReview[]|\Jikan\Model\Reviews\Recent\RecentMangaReview[]
      * @throws \RuntimeException
      * @throws \InvalidArgumentException|\Exception
      */

@@ -75,11 +75,12 @@ class Club
     private $characters;
 
     /**
-     * @param  ClubParser $parser
-     * @return Club
+     * @param  \Jikan\Parser\Club\ClubParser $parser
+     *
+     * @return self
      * @throws \Exception
      */
-    public static function fromParser(ClubParser $parser): Club
+    public static function fromParser(ClubParser $parser): self
     {
         $instance = new self();
 

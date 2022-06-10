@@ -41,7 +41,7 @@ class SeasonalParser implements ParserInterface
     }
 
     /**
-     * @return array|\Jikan\Model\Seasonal\SeasonalAnime[]
+     * @return \Jikan\Model\Seasonal\SeasonalAnime[]
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */

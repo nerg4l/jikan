@@ -42,17 +42,17 @@ class AnimeStats
     private $total;
 
     /**
-     * @var array
+     * @var \Jikan\Model\Anime\AnimeStatsScore[]
      */
     private $scores;
 
     /**
-     * @param AnimeStatsParser $parser
+     * @param \Jikan\Parser\Anime\AnimeStatsParser $parser
      *
-     * @return AnimeStats
+     * @return self
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(AnimeStatsParser $parser): AnimeStats
+    public static function fromParser(AnimeStatsParser $parser): self
     {
         $instance = new self();
         $instance->watching = $parser->getWatching();
@@ -115,7 +115,7 @@ class AnimeStats
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Anime\AnimeStatsScore[]
      */
     public function getScores(): array
     {

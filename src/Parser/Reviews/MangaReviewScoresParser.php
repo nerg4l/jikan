@@ -1,6 +1,6 @@
 <?php
 
-namespace Jikan\Parser\Manga;
+namespace Jikan\Parser\Reviews;
 
 use Jikan\Model\Manga\MangaReviewScores;
 use Jikan\Parser\ParserInterface;

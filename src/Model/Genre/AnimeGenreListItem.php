@@ -3,7 +3,6 @@
 namespace Jikan\Model\Genre;
 
 use Jikan\Parser\Genre\AnimeGenreListItemParser;
-use Jikan\Parser\Genre\AnimeGenreListParser;
 
 /**
  * Class AnimeGenreListItem

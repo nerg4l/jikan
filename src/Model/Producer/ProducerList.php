@@ -3,7 +3,6 @@
 namespace Jikan\Model\Producer;
 
 use Jikan\Parser\Producer\ProducerListParser;
-use Jikan\Parser\Producer\ProducerParser;
 
 /**
  * Class Producer
@@ -14,14 +13,14 @@ class ProducerList
 {
 
     /**
-     * @var array|ProducerListItem[]
+     * @var \Jikan\Model\Producer\ProducerListItem[]
      */
     public $producers = [];
 
     /**
-     * @param ProducerParser $parser
+     * @param \Jikan\Parser\Producer\ProducerListParser $parser
      *
-     * @return Producer
+     * @return self
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
@@ -34,7 +33,7 @@ class ProducerList
     }
 
     /**
-     * @return array|ProducerListItem[]
+     * @return \Jikan\Model\Producer\ProducerListItem[]
      */
     public function getProducers()
     {

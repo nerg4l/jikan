@@ -6,10 +6,8 @@ use Jikan\Helper\Constants;
 use Jikan\Helper\Parser;
 use Jikan\Model\Common\CharacterMeta;
 use Jikan\Model\User\FavoriteAnime;
-use Jikan\Model\User\FavoriteCharacter;
 use Jikan\Model\User\FavoriteManga;
 use Jikan\Model\Common\PersonMeta;
-use Jikan\Model\Common\MalUrl;
 use Jikan\Model\User\Favorites;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -46,7 +44,7 @@ class FavoritesParser
 
 
     /**
-     * @return array
+     * @return \Jikan\Model\User\FavoriteAnime[]
      * @throws \InvalidArgumentException
      */
     public function getAnime(): array
@@ -66,7 +64,7 @@ class FavoritesParser
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\User\FavoriteManga[]
      * @throws \InvalidArgumentException
      */
     public function getManga(): array
@@ -86,7 +84,7 @@ class FavoritesParser
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\CharacterMeta[]
      * @throws \InvalidArgumentException
      */
     public function getCharacters(): array
@@ -105,7 +103,7 @@ class FavoritesParser
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\PersonMeta[]
      * @throws \InvalidArgumentException
      */
     public function getPeople(): array

@@ -68,7 +68,7 @@ class MangaForumRequest implements RequestInterface
     }
 
     /**
-     * @return string
+     * @return ?string
      */
     public function getTopic(): ?string
     {

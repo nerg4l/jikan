@@ -150,7 +150,7 @@ class AnimeStatsParser implements ParserInterface
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Anime\AnimeStatsScore[]
      * @throws \InvalidArgumentException
      */
     public function getScores(): array

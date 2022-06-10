@@ -15,8 +15,20 @@ use Jikan\Exception\BadResponseException;
 use Jikan\Exception\ParserException;
 use Jikan\Goutte\GoutteWrapper;
 use Jikan\Model;
+use Jikan\Model\Anime\AnimeUserUpdates;
+use Jikan\Model\Manga\MangaUserUpdates;
+use Jikan\Model\Recommendations\RecentRecommendations;
+use Jikan\Model\Recommendations\UserRecommendations;
 use Jikan\Parser;
+use Jikan\Parser\Anime\AnimeRecentlyUpdatedByUsersParser;
+use Jikan\Parser\Manga\MangaRecentlyUpdatedByUsersParser;
+use Jikan\Parser\Recommendations\RecentRecommendationsParser;
+use Jikan\Parser\Recommendations\UserRecommendationsParser;
 use Jikan\Request;
+use Jikan\Request\Anime\AnimeRecentlyUpdatedByUsersRequest;
+use Jikan\Request\Manga\MangaRecentlyUpdatedByUsersRequest;
+use Jikan\Request\Recommendations\RecentRecommendationsRequest;
+use Jikan\Request\User\UserRecommendationsRequest;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
@@ -31,7 +43,7 @@ class MalClient
     protected $ghoutte;
 
     /**
-     * @var HttpClientInterface|HttpClientInterface
+     * @var HttpClientInterface
      */
     protected $httpClient;
 
@@ -85,7 +97,6 @@ class MalClient
             throw $e;
         }
 
-        $crawler = $this->ghoutte->request('GET', $request->getPath());
         try {
             $parser = new Parser\Anime\EpisodesParser($crawler);
 
@@ -349,7 +360,7 @@ class MalClient
 
     /**
      * @param  Request\Anime\AnimePicturesRequest $request
-     * @return array
+     * @return \Jikan\Model\Common\Picture[]
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -367,7 +378,7 @@ class MalClient
 
     /**
      * @param  Request\Manga\MangaPicturesRequest $request
-     * @return array
+     * @return \Jikan\Model\Common\Picture[]
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -385,7 +396,7 @@ class MalClient
 
     /**
      * @param  Request\Character\CharacterPicturesRequest $request
-     * @return array
+     * @return \Jikan\Model\Common\DefaultPicture[]
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -470,7 +481,7 @@ class MalClient
      * @throws BadResponseException
      * @throws ParserException
      */
-    public function getAnimeSearchAlt(Request\Search\AnimeSearchRequest $request): Model\Search\AnimeSearchAlt
+    public function getAnimeSearchAlt(Request\Search\AnimeSearchRequest $request): Model\Search\AnimeSearch
     {
         $crawler = $this->ghoutte->request('GET', $request->getPath());
         try {
@@ -516,6 +527,7 @@ class MalClient
             if ($e->getCode() === 404) {
                 return Model\Search\CharacterSearch::mock();
             }
+            throw $e;
         }
 
         try {
@@ -541,6 +553,7 @@ class MalClient
             if ($e->getCode() === 404) {
                 return Model\Search\PersonSearch::mock();
             }
+            throw $e;
         }
 
         try {
@@ -574,7 +587,7 @@ class MalClient
     /**
      * @param Request\Top\TopAnimeRequest $request
      *
-     * @return Model\Top\TopAnimeListItem[]
+     * @return Model\Top\TopAnime
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -593,7 +606,7 @@ class MalClient
     /**
      * @param Request\Top\TopMangaRequest $request
      *
-     * @return Model\Top\TopMangaListItem[]
+     * @return Model\Top\TopManga
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -612,7 +625,7 @@ class MalClient
     /**
      * @param Request\Top\TopCharactersRequest $request
      *
-     * @return Model\Top\TopCharacterListItem[]
+     * @return Model\Top\TopCharacters
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -631,7 +644,7 @@ class MalClient
     /**
      * @param Request\Top\TopPeopleRequest $request
      *
-     * @return Model\Top\TopPersonListItem[]
+     * @return \Jikan\Model\Top\TopPeople
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -686,7 +699,7 @@ class MalClient
 
     /**
      * @param  Request\Anime\AnimeForumRequest $request
-     * @return array
+     * @return \Jikan\Model\Forum\ForumTopic[]
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -704,7 +717,7 @@ class MalClient
 
     /**
      * @param  Request\Manga\MangaForumRequest $request
-     * @return array
+     * @return \Jikan\Model\Forum\ForumTopic[]
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -758,7 +771,7 @@ class MalClient
 
     /**
      * @param  Request\SeasonList\SeasonListRequest $request
-     * @return array
+     * @return Model\SeasonList\SeasonArchive
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -776,7 +789,7 @@ class MalClient
 
     /**
      * @param  Request\User\UserHistoryRequest $request
-     * @return array
+     * @return \Jikan\Model\User\History[]
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -794,7 +807,7 @@ class MalClient
 
     /**
      * @param  Request\User\UserAnimeListRequest $request
-     * @return array
+     * @return Model\User\AnimeListItem[]
      * @throws BadResponseException
      */
     public function getUserAnimeList(Request\User\UserAnimeListRequest $request): array
@@ -828,7 +841,7 @@ class MalClient
 
     /**
      * @param  Request\User\UserMangaListRequest $request
-     * @return array
+     * @return Model\User\MangaListItem[]
      * @throws BadResponseException
      */
     public function getUserMangaList(Request\User\UserMangaListRequest $request): array
@@ -861,16 +874,16 @@ class MalClient
 
 
     /**
-     * @param  Request\Anime\AnimeRecentlyUpdatedByUsersRequest $request
-     * @return array
+     * @param  \Jikan\Request\Anime\AnimeRecentlyUpdatedByUsersRequest $request
+     * @return \Jikan\Model\Anime\AnimeUserUpdates
      * @throws BadResponseException
      * @throws ParserException
      */
-    public function getAnimeRecentlyUpdatedByUsers(Request\Anime\AnimeRecentlyUpdatedByUsersRequest $request): Model\Anime\AnimeUserUpdates
+    public function getAnimeRecentlyUpdatedByUsers(AnimeRecentlyUpdatedByUsersRequest $request): AnimeUserUpdates
     {
         $crawler = $this->ghoutte->request('GET', $request->getPath());
         try {
-            $parser = new Parser\Anime\AnimeRecentlyUpdatedByUsersParser($crawler);
+            $parser = new AnimeRecentlyUpdatedByUsersParser($crawler);
 
             return $parser->getModel();
         } catch (\Exception $e) {
@@ -879,16 +892,16 @@ class MalClient
     }
 
     /**
-     * @param  Request\Manga\MangaRecentlyUpdatedByUsersRequest $request
-     * @return array
+     * @param  \Jikan\Request\Manga\MangaRecentlyUpdatedByUsersRequest $request
+     * @return \Jikan\Model\Manga\MangaUserUpdates
      * @throws BadResponseException
      * @throws ParserException
      */
-    public function getMangaRecentlyUpdatedByUsers(Request\Manga\MangaRecentlyUpdatedByUsersRequest $request): Model\Manga\MangaUserUpdates
+    public function getMangaRecentlyUpdatedByUsers(MangaRecentlyUpdatedByUsersRequest $request): MangaUserUpdates
     {
         $crawler = $this->ghoutte->request('GET', $request->getPath());
         try {
-            $parser = new Parser\Manga\MangaRecentlyUpdatedByUsersParser($crawler);
+            $parser = new MangaRecentlyUpdatedByUsersParser($crawler);
 
             return $parser->getModel();
         } catch (\Exception $e) {
@@ -898,7 +911,7 @@ class MalClient
 
     /**
      * @param  Request\Anime\AnimeRecommendationsRequest $request
-     * @return array
+     * @return \Jikan\Model\Common\Recommendation[]
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -916,7 +929,7 @@ class MalClient
 
     /**
      * @param  Request\Manga\MangaRecommendationsRequest $request
-     * @return array
+     * @return \Jikan\Model\Common\Recommendation[]
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -1109,7 +1122,7 @@ class MalClient
     /**
      * @param Request\Reviews\RecentReviewsRequest $request
      *
-     * @return
+     * @return Model\Reviews\RecentReviews
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -1126,16 +1139,16 @@ class MalClient
     }
 
     /**
-     * @param Request\Recommendations\RecentRecommendationsRequest $request
-     * @return array
+     * @param  \Jikan\Request\Recommendations\RecentRecommendationsRequest $request
+     * @return \Jikan\Model\Recommendations\RecentRecommendations
      * @throws BadResponseException
      * @throws ParserException
      */
-    public function getRecentRecommendations(Request\Recommendations\RecentRecommendationsRequest $request): Model\Recommendations\RecentRecommendations
+    public function getRecentRecommendations(RecentRecommendationsRequest $request): RecentRecommendations
     {
         $crawler = $this->ghoutte->request('GET', $request->getPath());
         try {
-            $parser = new Parser\Recommendations\RecentRecommendationsParser($crawler);
+            $parser = new RecentRecommendationsParser($crawler);
 
             return $parser->getModel();
         } catch (\Exception $e) {
@@ -1173,7 +1186,7 @@ class MalClient
 
     /**
      * @param Request\User\RecentlyOnlineUsersRequest $request
-     * @return array
+     * @return \Jikan\Model\Search\UserSearchListItem[]
      * @throws BadResponseException
      * @throws ParserException
      */
@@ -1307,16 +1320,16 @@ class MalClient
 
 
     /**
-     * @param Request\User\UserRecommendationsRequest $request
-     * @return Model\Recommendations\UserRecommendations
+     * @param  \Jikan\Request\User\UserRecommendationsRequest $request
+     * @return \Jikan\Model\Recommendations\UserRecommendations
      * @throws BadResponseException
      * @throws ParserException
      */
-    public function getUserRecommendations(Request\User\UserRecommendationsRequest $request): Model\Recommendations\UserRecommendations
+    public function getUserRecommendations(UserRecommendationsRequest $request): UserRecommendations
     {
         $crawler = $this->ghoutte->request('GET', $request->getPath());
         try {
-            $parser = new Parser\Recommendations\UserRecommendationsParser($crawler);
+            $parser = new UserRecommendationsParser($crawler);
 
             return $parser->getModel();
         } catch (\Exception $e) {
@@ -1326,7 +1339,7 @@ class MalClient
 
     /**
      * @param Request\User\UserClubsRequest $request
-     * @return array
+     * @return Model\Common\ClubMeta[]
      * @throws BadResponseException
      * @throws ParserException
      */

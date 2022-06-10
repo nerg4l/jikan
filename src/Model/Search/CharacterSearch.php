@@ -65,7 +65,7 @@ class CharacterSearch extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Search\CharacterSearchListItem[]
      */
     public function getResults(): array
     {

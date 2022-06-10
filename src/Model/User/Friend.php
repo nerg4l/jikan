@@ -3,7 +3,6 @@
 namespace Jikan\Model\User;
 
 use Jikan\Model\Common\UserMeta;
-use Jikan\Model\Resource\UserImageResource\UserImageResource;
 use Jikan\Parser\User\Friends\FriendParser;
 
 /**

@@ -84,7 +84,7 @@ class TopMangaRequest implements RequestInterface
     /**
      * @return string|null
      */
-    public function getType()
+    public function getType(): ?string
     {
         return $this->type;
     }

@@ -16,6 +16,6 @@ class MangaGenresRequest implements RequestInterface
      */
     public function getPath(): string
     {
-        return sprintf('https://myanimelist.net/manga.php');
+        return 'https://myanimelist.net/manga.php';
     }
 }

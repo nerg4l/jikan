@@ -21,8 +21,8 @@ class UserMangaReview extends MangaReview
     private $entry;
 
     /**
-     * @param MangaReviewParser $parser
-     * @return UserAnimeReview
+     * @param \Jikan\Parser\Reviews\MangaReviewParser $parser
+     * @return \Jikan\Model\User\Reviews\UserMangaReview
      * @throws \Exception
      */
     public static function fromParser(MangaReviewParser $parser): UserMangaReview

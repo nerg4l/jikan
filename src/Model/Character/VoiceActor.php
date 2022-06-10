@@ -24,13 +24,13 @@ class VoiceActor
     private $language;
 
     /**
-     * @param VoiceActorParser $parser
+     * @param \Jikan\Parser\Character\VoiceActorParser $parser
      *
-     * @return VoiceActor
+     * @return self
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(VoiceActorParser $parser): VoiceActor
+    public static function fromParser(VoiceActorParser $parser): self
     {
         $instance = new self();
         $instance->person = $parser->getPersonMeta();

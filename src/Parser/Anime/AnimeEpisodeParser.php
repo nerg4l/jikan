@@ -156,7 +156,7 @@ class AnimeEpisodeParser implements ParserInterface
     }
 
     /**
-     * @return string
+     * @return ?string
      * @throws \InvalidArgumentException
      */
     public function getForumUrl(): ?string

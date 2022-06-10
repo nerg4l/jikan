@@ -114,7 +114,7 @@ class MangaGenre extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Common\MangaCard[]
      */
     public function getResults(): array
     {

@@ -3,7 +3,6 @@
 namespace JikanTest\Parser\Pictures;
 
 use Goutte\Client;
-use Jikan\Model\Common\Picture;
 use Jikan\Model\Resource\CommonImageResource\CommonImageResource;
 use Jikan\Parser\Common\PicturesPageParser;
 use JikanTest\TestCase;

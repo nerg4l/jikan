@@ -2,13 +2,8 @@
 
 namespace Jikan\Parser\Recommendations;
 
-use Jikan\Model\Anime\AnimeReview;
-use Jikan\Model\Manga\MangaReview;
 use Jikan\Model\Recommendations\RecentRecommendations;
 use Jikan\Model\Recommendations\RecommendationListItem;
-use Jikan\Model\Reviews\RecentReviews;
-use Jikan\Parser\Anime\AnimeReviewParser;
-use Jikan\Parser\Manga\MangaReviewParser;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -34,7 +29,7 @@ class RecentRecommendationsParser
     }
 
     /**
-     * @return RecentReviews
+     * @return \Jikan\Model\Recommendations\RecentRecommendations
      * @throws \Exception
      */
     public function getModel(): RecentRecommendations
@@ -43,7 +38,7 @@ class RecentRecommendationsParser
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Recommendations\RecommendationListItem[]
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */

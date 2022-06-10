@@ -24,7 +24,7 @@ class SeasonListItem
     /**
      * @param SeasonListItemParser $parser
      *
-     * @return SeasonListItem
+     * @return self
      * @throws \InvalidArgumentException
      */
     public static function fromParser(SeasonListItemParser $parser): self

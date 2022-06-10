@@ -2,10 +2,7 @@
 
 namespace Jikan\Parser\SeasonList;
 
-use Jikan\Model\Anime\AnimeReviews;
 use Jikan\Model\SeasonList\SeasonArchive;
-use Jikan\Model\SeasonList\SeasonListItem;
-use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -39,7 +36,7 @@ class SeasonListParser
     }
 
     /**
-     * @return SeasonListItem[]
+     * @return \Jikan\Model\SeasonList\SeasonListItem[]
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */

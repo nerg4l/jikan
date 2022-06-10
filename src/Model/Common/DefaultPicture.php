@@ -19,10 +19,10 @@ class DefaultPicture
     /**
      * @param PictureParser $parser
      *
-     * @return DefaultPicture
+     * @return self
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(PictureParser $parser): DefaultPicture
+    public static function fromParser(PictureParser $parser): self
     {
         $instance = new self();
         $instance->imageUrl = $parser->getSmall();

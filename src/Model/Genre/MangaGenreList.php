@@ -2,9 +2,7 @@
 
 namespace Jikan\Model\Genre;
 
-use Jikan\Model\Common\MalUrl;
 use Jikan\Parser\Genre\MangaGenreListParser;
-use Jikan\Parser\Genre\MangaGenreParser;
 
 /**
  * Class MangaGenre
@@ -15,29 +13,29 @@ class MangaGenreList
 {
 
     /**
-     * @var array|MangaGenreListItem[]
+     * @var \Jikan\Model\Genre\MangaGenreListItem[]
      */
     public $genres = [];
 
     /**
-     * @var array|MangaGenreListItem[]
+     * @var \Jikan\Model\Genre\MangaGenreListItem[]
      */
     public $explicitGenres = [];
 
     /**
-     * @var array|MangaGenreListItem[]
+     * @var \Jikan\Model\Genre\MangaGenreListItem[]
      */
     public $themes = [];
 
     /**
-     * @var array|MangaGenreListItem[]
+     * @var \Jikan\Model\Genre\MangaGenreListItem[]
      */
     public $demographics = [];
 
     /**
      * @param MangaGenreListParser $parser
      *
-     * @return MangaGenre
+     * @return self
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
@@ -54,7 +52,7 @@ class MangaGenreList
     }
 
     /**
-     * @return array|MangaGenreListItem[]
+     * @return \Jikan\Model\Genre\MangaGenreListItem[]
      */
     public function getExplicitGenres(): array
     {
@@ -62,7 +60,7 @@ class MangaGenreList
     }
 
     /**
-     * @return array|MangaGenreListItem[]
+     * @return \Jikan\Model\Genre\MangaGenreListItem[]
      */
     public function getThemes(): array
     {
@@ -70,7 +68,7 @@ class MangaGenreList
     }
 
     /**
-     * @return array|MangaGenreListItem[]
+     * @return \Jikan\Model\Genre\MangaGenreListItem[]
      */
     public function getDemographics(): array
     {
@@ -78,9 +76,9 @@ class MangaGenreList
     }
 
     /**
-     * @return array|MangaGenreListItem[]
+     * @return \Jikan\Model\Genre\MangaGenreListItem[]
      */
-    public function getGenres()
+    public function getGenres(): array
     {
         return $this->genres;
     }

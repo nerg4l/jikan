@@ -2,7 +2,6 @@
 
 namespace Jikan\Model\Anime;
 
-use Jikan\Model\Common\DateRange;
 use Jikan\Parser\Anime\EpisodeListItemParser;
 
 /**

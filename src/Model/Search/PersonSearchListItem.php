@@ -34,7 +34,7 @@ class PersonSearchListItem
     private $name;
 
     /**
-     * @var array
+     * @var string[]
      */
     private $alternativeNames;
 
@@ -72,7 +72,7 @@ class PersonSearchListItem
 
         $instance->url = $parser->getPersonURL();
         $instance->malId = \Jikan\Helper\Parser::idFromUrl($instance->url);
-        $instance->images = PersonImageResource::factory($parser->getImageUrl());
+        $instance->images = PersonImageResource::factory($parser->getPersonImageUrl());
         $instance->name = $parser->getPersonName();
         $instance->alternativeNames = $parser->getPersonAlternateNames();
 
@@ -113,7 +113,7 @@ class PersonSearchListItem
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getAlternativeNames(): array
     {

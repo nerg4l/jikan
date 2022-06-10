@@ -9,7 +9,7 @@ namespace Jikan\Model\Common;
  */
 class UserMetaBasic extends User
 {
-    public static function fromMeta($username, $url)
+    public static function fromMeta($username, $url): self
     {
         $instance = new self();
 

@@ -16,6 +16,6 @@ class AnimeGenresRequest implements RequestInterface
      */
     public function getPath(): string
     {
-        return sprintf('https://myanimelist.net/anime.php');
+        return 'https://myanimelist.net/anime.php';
     }
 }

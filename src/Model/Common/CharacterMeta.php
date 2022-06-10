@@ -35,7 +35,7 @@ class CharacterMeta
     /**
      * Genre constructor.
      *
-     * @param string $title
+     * @param string $name
      * @param string $url
      * @param string $imageUrl
      */

@@ -22,12 +22,12 @@ class Picture
     private $largeImageUrl;
 
     /**
-     * @param PictureParser $parser
+     * @param \Jikan\Parser\Common\PictureParser $parser
      *
-     * @return Picture
+     * @return self
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(PictureParser $parser): Picture
+    public static function fromParser(PictureParser $parser): self
     {
         $instance = new self();
         $instance->largeImageUrl = $parser->getLarge();

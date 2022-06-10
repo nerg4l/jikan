@@ -2,7 +2,6 @@
 
 namespace JikanTest;
 
-use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpClient\MockHttpClient;
 
 abstract class TestCase extends \PHPUnit\Framework\TestCase

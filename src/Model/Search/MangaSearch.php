@@ -65,7 +65,7 @@ class MangaSearch extends Results implements Pagination
     }
 
     /**
-     * @return array
+     * @return \Jikan\Model\Search\MangaSearchListItem[]
      */
     public function getResults(): array
     {

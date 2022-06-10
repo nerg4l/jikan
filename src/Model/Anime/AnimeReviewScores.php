@@ -2,7 +2,7 @@
 
 namespace Jikan\Model\Anime;
 
-use Jikan\Parser;
+use Jikan\Parser\Reviews\AnimeReviewScoresParser;
 
 /**
  * Class AnimeReviewScores
@@ -43,12 +43,12 @@ class AnimeReviewScores
     private $enjoyment;
 
     /**
-     * @param Parser\Reviews\AnimeReviewScoresParser $parser
+     * @param \Jikan\Parser\Reviews\AnimeReviewScoresParser $parser
      *
-     * @return AnimeReviewScores
+     * @return self
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(Parser\Reviews\AnimeReviewScoresParser $parser): AnimeReviewScores
+    public static function fromParser(AnimeReviewScoresParser $parser): self
     {
         $instance = new self();
 

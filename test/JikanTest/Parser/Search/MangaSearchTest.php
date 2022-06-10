@@ -10,7 +10,6 @@ use Jikan\MyAnimeList\MalClient;
  */
 class MangaSearchTest extends TestCase
 {
-
     private $search;
     private $manga;
 

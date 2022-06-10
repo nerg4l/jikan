@@ -39,7 +39,7 @@ class MangaGenreListParser implements ParserInterface
     }
 
     /**
-     * @return array|\Jikan\Model\Genre\MangaGenreListItem[]
+     * @return \Jikan\Model\Genre\MangaGenreListItem[]
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
@@ -53,7 +53,7 @@ class MangaGenreListParser implements ParserInterface
     }
 
     /**
-     * @return array|\Jikan\Model\Genre\MangaGenreListItem[]
+     * @return \Jikan\Model\Genre\MangaGenreListItem[]
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
@@ -67,7 +67,7 @@ class MangaGenreListParser implements ParserInterface
     }
 
     /**
-     * @return array|\Jikan\Model\Genre\MangaGenreListItem[]
+     * @return \Jikan\Model\Genre\MangaGenreListItem[]
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
@@ -81,7 +81,7 @@ class MangaGenreListParser implements ParserInterface
     }
 
     /**
-     * @return array|\Jikan\Model\Genre\MangaGenreListItem[]
+     * @return \Jikan\Model\Genre\MangaGenreListItem[]
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */

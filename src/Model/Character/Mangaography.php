@@ -19,12 +19,12 @@ class Mangaography extends Ography
     private $manga;
 
     /**
-     * @param MangaographyParser $parser
+     * @param \Jikan\Parser\Character\MangaographyParser $parser
      *
-     * @return Mangaography
+     * @return self
      * @throws \InvalidArgumentException
      */
-    public static function fromParser(MangaographyParser $parser): Mangaography
+    public static function fromParser(MangaographyParser $parser): self
     {
         $instance = new self();
 

@@ -3,8 +3,6 @@
 namespace Jikan\Parser\News;
 
 use Jikan\Model\News\NewsList;
-use Jikan\Model\News\NewsListItem;
-use Jikan\Model\Search\AnimeSearch;
 use Jikan\Parser\ParserInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -42,7 +40,7 @@ class NewsListParser implements ParserInterface
     }
 
     /**
-     * @return NewsListItem[]
+     * @return \Jikan\Model\News\NewsListItem[]
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      */

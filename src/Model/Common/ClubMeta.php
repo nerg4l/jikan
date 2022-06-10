@@ -26,6 +26,7 @@ class ClubMeta
     private $url;
 
     /**
+     * @param int $malId
      * @param string $name
      * @param string $url
      * @return ClubMeta
